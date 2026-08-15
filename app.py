@@ -16,7 +16,7 @@ st.write("Upload the test dataset, select a classification model, and evaluate i
 MODEL_PATHS = {
     "Logistic Regression": "Model/logistic_regression.pkl",
     "Decision Tree": "Model/decision_tree.pkl",
-    "K-Nearest Neighbors": "Model/k_nearest_neighbors.pkl",
+    "K-Nearest Neighbors": "Model/knearest_neighbors.pkl",
     "Gaussian Naive Bayes": "Model/gaussian_naive_bayes.pkl",
     "Random Forest": "Model/random_forest.pkl",
 }
