@@ -1,0 +1,8 @@
+classification-ml-project/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── test_data.csv
+│
+└── model/
