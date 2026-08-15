@@ -14,11 +14,11 @@ st.title("🤖 Machine Learning Classification Model Comparison")
 st.write("Upload the test dataset, select a classification model, and evaluate its predictions.")
 
 MODEL_PATHS = {
-    "Logistic Regression": "model/logistic_regression.pkl",
-    "Decision Tree": "model/decision_tree.pkl",
-    "K-Nearest Neighbors": "model/k_nearest_neighbors.pkl",
-    "Gaussian Naive Bayes": "model/gaussian_naive_bayes.pkl",
-    "Random Forest": "model/random_forest.pkl",
+    "Logistic Regression": "Model/logistic_regression.pkl",
+    "Decision Tree": "Model/decision_tree.pkl",
+    "K-Nearest Neighbors": "Model/k_nearest_neighbors.pkl",
+    "Gaussian Naive Bayes": "Model/gaussian_naive_bayes.pkl",
+    "Random Forest": "Model/random_forest.pkl",
 }
 
 TARGET_COLUMN = "target"
@@ -48,7 +48,7 @@ def load_models():
 models = load_models()
 
 if not models:
-    st.error("No trained models found. Check that all .pkl files are inside the model/ folder.")
+    st.error("No trained models found. Check that all .pkl files are inside the Model/ folder.")
     st.stop()
 
 st.sidebar.header("Model Selection")
