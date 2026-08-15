@@ -8,10 +8,22 @@ from sklearn.metrics import (
     f1_score, matthews_corrcoef, confusion_matrix, classification_report
 )
 
-st.set_page_config(page_title="ML Classification Model Comparison", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="BITS Classification ML Project", page_icon="🤖", layout="wide")
 
-st.title("🤖 Machine Learning Classification Model Comparison")
-st.write("Upload the test dataset, select a classification model, and evaluate its predictions.")
+st.title("🤖 BITS Classification ML Project")
+st.subheader("Machine Learning Model Comparison Dashboard")
+
+st.markdown(
+    """
+    This application compares five supervised machine-learning classifiers
+    on the **Breast Cancer Wisconsin (Diagnostic) dataset**.
+
+    Upload the test dataset, select a model, and evaluate its performance
+    using **Accuracy, AUC, Precision, Recall, F1 Score, and MCC**.
+    """
+)
+
+st.markdown("---")
 
 MODEL_PATHS = {
     "Logistic Regression": "Model/logistic_regression.pkl",
@@ -51,7 +63,33 @@ if not models:
     st.error("No trained models found. Check that all .pkl files are inside the Model/ folder.")
     st.stop()
 
-st.sidebar.header("Model Selection")
+st.sidebar.title("📌 Project Information")
+
+st.sidebar.markdown(
+    """
+    **Dataset**  
+    Breast Cancer Wisconsin (Diagnostic)
+
+    **Models implemented**
+    - Logistic Regression
+    - Decision Tree
+    - K-Nearest Neighbors
+    - Gaussian Naive Bayes
+    - Random Forest
+
+    **Evaluation metrics**
+    - Accuracy
+    - AUC
+    - Precision
+    - Recall
+    - F1 Score
+    - MCC
+    """
+)
+
+st.sidebar.markdown("---")
+st.sidebar.header("🎯 Model Selection")
+
 selected_model_name = st.sidebar.selectbox("Select a classification model:", list(models.keys()))
 selected_model = models[selected_model_name]
 
