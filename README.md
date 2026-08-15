@@ -45,13 +45,23 @@ An 80:20 stratified train-test split was used for model evaluation. Standardizat
 
 GitHub Repository:
 
-[https://github.com/2025ac05036-all/bits_classification-ml-project](https://github.com/2025ac05036-all/bits_classification-ml-project?utm_source=chatgpt.com)
+[GitHub Repository](https://github.com/2025ac05036-all/bits_classification-ml-project.git)
 
 The repository contains the files required for the project, including the Streamlit application, Python dependencies, test data, and trained machine learning models.
 
 ---
+# Live Streamlit Application
 
-# d. Models Used
+Live Streamlit App:
+
+https://2025ac05036-classification-ml-project.streamlit.app
+
+The application provides an interactive interface for uploading the test
+dataset, selecting a classification model, viewing evaluation metrics,
+examining the confusion matrix and classification report, and comparing
+the performance of all implemented models.
+
+#  Models Used
 
 The following five classification models were implemented on the same dataset:
 
@@ -145,7 +155,7 @@ bits_classification-ml-project/
 └── model/
     ├── logistic_regression.pkl
     ├── decision_tree.pkl
-    ├── k_nearest_neighbors.pkl
+    ├── knearest_neighbors.pkl
     ├── gaussian_naive_bayes.pkl
     └── random_forest.pkl
 ```
